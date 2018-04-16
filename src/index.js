@@ -1,10 +1,5 @@
-const EntitiesListener = () => {
-  console.log('EntitiesListener');
-};
-
-const EntitiesProvider = () => {
-  console.log('EntitiesProvider');
-};
+const EntitiesProvider = require('./entitiesProvider');
+const EntitiesListener = require('./entitiesListener');
 
 module.exports = {
   EntitiesListener,

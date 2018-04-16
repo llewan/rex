@@ -2,14 +2,21 @@
   "name": "rex",
   "version": "0.0.1",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "rm -rf dist",
+    "build": "babel --out-dir dist --ignore *.spec.js src",
+    "test": "mocha src/index.spec.js --compilers js:babel-register",
+    "test:watch": "mocha src/index.spec.js -w --compilers js:babel-register"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/llewan/rex.git"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "keywords": [
     "react",
     "state",
@@ -21,5 +28,26 @@
   "bugs": {
     "url": "https://github.com/llewan/rex/issues"
   },
-  "homepage": "https://github.com/llewan/rex#readme"
+  "homepage": "https://github.com/llewan/rex#readme",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
+    "babel-register": "6.26.0",
+    "chai": "4.1.2",
+    "enzyme": "3.3.0",
+    "mocha": "5.1.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2",
+      "react"
+    ]
+  },
+  "dependencies": {
+    "prop-types": "15.6.1",
+    "react": "16.3.1"
+  }
 }
