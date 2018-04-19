@@ -1,6 +1,6 @@
 {
   "name": "rex-react",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Simple library for helping share and manage state in react applications.",
   "main": "dist/index.js",
   "scripts": {

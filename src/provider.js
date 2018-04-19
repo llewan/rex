@@ -30,7 +30,7 @@ class Provider extends React.Component {
 }
 
 Provider.childContextTypes = {
-  entities: PropTypes.bool
+  entities: PropTypes.arrayOf(PropTypes.object)
 };
 
 Provider.defaultProps = {

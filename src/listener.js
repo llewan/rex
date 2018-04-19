@@ -19,7 +19,11 @@ class Listener extends React.Component {
   }
 }
 Listener.contextTypes = {
-  entities: PropTypes.bool
+  entities: PropTypes.arrayOf(PropTypes.object)
+};
+
+Listener.propTypes = {
+  children: PropTypes.any.isRequired,
 };
 
 module.exports = Listener;
