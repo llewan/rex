@@ -1,7 +1,7 @@
 const React = require('react');
 const PropTypes = require('prop-types');
 
-class EntitiesProvider extends React.Component {
+class Provider extends React.Component {
   constructor(props) {
     super(props);
     this.instances = [];
@@ -29,8 +29,16 @@ class EntitiesProvider extends React.Component {
   }
 }
 
-EntitiesProvider.childContextTypes = {
+Provider.childContextTypes = {
   entities: PropTypes.bool
 };
 
-module.exports = EntitiesProvider;
+Provider.defaultProps = {
+  entities: []
+};
+
+Provider.propTypes = {
+  entities: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+module.exports = Provider;

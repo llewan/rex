@@ -1,7 +1,7 @@
-const EntitiesProvider = require('./entitiesProvider');
-const EntitiesListener = require('./entitiesListener');
+const Provider = require('./provider');
+const Listener = require('./listener');
 
 module.exports = {
-  EntitiesListener,
-  EntitiesProvider,
+  Provider,
+  Listener,
 };

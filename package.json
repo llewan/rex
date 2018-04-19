@@ -1,7 +1,7 @@
 {
-  "name": "rex",
-  "version": "0.0.1",
-  "description": "",
+  "name": "rex-react",
+  "version": "0.0.1-beta",
+  "description": "Simple library for helping share and manage state in react applications.",
   "main": "dist/index.js",
   "scripts": {
     "prebuild": "rm -rf dist",
@@ -20,7 +20,7 @@
   "keywords": [
     "react",
     "state",
-    "model",
+    "modelling",
     "entity"
   ],
   "author": "Leonardo Lewandowski <leolewan@gmail.com>",

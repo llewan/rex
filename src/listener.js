@@ -2,7 +2,7 @@ const React = require('react');
 const PropTypes = require('prop-types');
 
 const DUMMY_STATE = {};
-class EntitiesListener extends React.Component {
+class Listener extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -18,8 +18,8 @@ class EntitiesListener extends React.Component {
     return this.props.children.apply(null, this.context.entities);
   }
 }
-EntitiesListener.contextTypes = {
+Listener.contextTypes = {
   entities: PropTypes.bool
 };
 
-module.exports = EntitiesListener;
+module.exports = Listener;
