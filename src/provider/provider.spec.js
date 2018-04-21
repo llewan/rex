@@ -1,0 +1,1 @@
+const Provider = require('./provider');

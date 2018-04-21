@@ -1,5 +1,5 @@
-const Provider = require('./provider');
-const Listener = require('./listener');
+const Provider = require('./provider/provider');
+const Listener = require('./listener/listener');
 
 module.exports = {
   Provider,
