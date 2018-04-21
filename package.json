@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "babel --out-dir dist --ignore *.spec.js src",
-    "test": "mocha src/index.spec.js --compilers js:babel-register",
+    "test": "mocha src/* --compilers js:babel-register",
     "test:watch": "mocha src/index.spec.js -w --compilers js:babel-register"
   },
   "repository": {
@@ -36,8 +36,10 @@
     "babel-preset-stage-2": "6.24.1",
     "babel-register": "6.26.0",
     "chai": "4.1.2",
-    "enzyme": "3.3.0",
-    "mocha": "5.1.0"
+    "sinon": "3.2.0",
+    "enzyme": "2.8.2",
+    "mocha": "5.1.0",
+    "react-addons-test-utils": "15.5.1"
   },
   "babel": {
     "presets": [
@@ -47,7 +49,8 @@
     ]
   },
   "dependencies": {
-    "prop-types": "15.6.1",
-    "react": "16.3.1"
+    "prop-types": "15.5.10",
+    "react": "15.5.4",
+    "react-dom": "15.5.4"
   }
 }
