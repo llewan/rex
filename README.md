@@ -1,5 +1,7 @@
-# Rex
-Simple library for helping share and manage state in react applications  
+# Rex [![npm version](https://img.shields.io/npm/v/rex-react.svg)](https://www.npmjs.com/package/rex-react) [![license type](https://img.shields.io/npm/l/rex-react.svg)](https://github.com/llewan/rex.git/blob/master/LICENSE) [![codecov](https://codecov.io/gh/llewan/rex/branch/develop/graph/badge.svg)](https://codecov.io/gh/llewan/rex)
+ 
+Simple library for helping share and manage state in react applications. It provides
+a clear separation between business logic and views.
 
 ## Installation
 ```
@@ -14,6 +16,30 @@ import { Provider, Listener } from 'rex-react';
 // commonjs
 const Provider = require('rex-react').Provider;
 const Listener = require('rex-react').Listener;
+```
+
+## API 
+The library exposes two React components: `Provider` and `Listener`
+
+### `<Provider />`
+#### `props.entities`
+This is an array of plain objects that represents the state of your app. It is mandatory that you pass at least one element.
+```
+<Provider entities={[Person, Ship]}>
+  <div>...</div>
+</Listener>
+```
+
+### `<Listener />`
+#### `props.children`
+A render function that is called with the array of objects/entities.
+```
+<Listener>
+  {(Person, Ship) => {
+    /* And you can access and do whetever with entities you provided before */
+    <h1>{Person.getName()}</h1>
+  }}
+</Listener>
 ```
 
 ## Guide
@@ -70,9 +96,9 @@ const Display = props => {
   );
 };
 ```
-It doesn't matter where the component is located along the tree, it can access and fire methods of Counter.
 
-And that's all you need! An easy way to share state among components and a clear separation between app logic and views, which is cool and very important. 
+## Questions or suggestions?
+Feel free to contact me on [Twitter](https://twitter.com/leolewan) or [open an issue](https://github.com/llewan/rex/issues/new).
 
  
 

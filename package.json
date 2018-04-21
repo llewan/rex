@@ -6,8 +6,8 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "babel --out-dir dist --ignore *.spec.js src",
-    "test": "mocha src/* --compilers js:babel-register",
-    "test:watch": "mocha src/index.spec.js -w --compilers js:babel-register"
+    "test": "NODE_ENV=test istanbul cover _mocha -- --opts .mocharc",
+    "report-coverage": "cat ./coverage/lcov.info | codecov"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,8 @@
     "react",
     "state",
     "modelling",
-    "entity"
+    "entity",
+    "javascript"
   ],
   "author": "Leonardo Lewandowski <leolewan@gmail.com>",
   "license": "MIT",
@@ -36,10 +37,12 @@
     "babel-preset-stage-2": "6.24.1",
     "babel-register": "6.26.0",
     "chai": "4.1.2",
-    "sinon": "3.2.0",
+    "codecov": "3.0.0",
     "enzyme": "2.8.2",
+    "istanbul": "1.1.0-alpha.1",
     "mocha": "5.1.0",
-    "react-addons-test-utils": "15.5.1"
+    "react-addons-test-utils": "15.5.1",
+    "sinon": "3.2.0"
   },
   "babel": {
     "presets": [
