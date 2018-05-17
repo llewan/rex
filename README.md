@@ -27,7 +27,7 @@ This is an array of plain objects that represents the state of your app. It is m
 ```
 <Provider entities={[Person, Ship]}>
   <div>...</div>
-</Listener>
+</Provider>
 ```
 
 ### `<Listener />`
