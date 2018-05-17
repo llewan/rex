@@ -48,7 +48,7 @@ First, wrap your main component with `Provider` and pass an array of objects or 
 const App = (props) => {
   return (
     <Provider entities={[Counter]}>
-      <Counter />
+      <CounterUi />
       <Display />
     </Provider>
   );
@@ -73,7 +73,7 @@ const Counter = {
 ```
 finally, every component that needs to be aware of the Counter object can do it this way:
 ```
-const Counter = props => {
+const CounterUi = props => {
   return (
     <Listener>
       {counter => (
